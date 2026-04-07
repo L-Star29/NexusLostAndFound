@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Montserrat';
+    src: url('./assets/Fonts/Montserrat/static/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.p {
+  margin-bottom: 0;
+}
+
+.link-group {
+  position: relative;
+    height: 100px;
+    background: rgba(34, 34, 41, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    display: flex;
+    gap: 25%;
+    margin-top: 25px;
+    margin: 25px 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: Montserrat-SemiBold, sans-serif;
+    color: white;
+    padding: 0 50px;
+    overflow: hidden;
+}
+
+.link-group::before,
+.link-group::after {
+  content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.link-group::before {
+  top: -80px;
+    left: -80px;
+    background: radial-gradient(circle, rgba(59, 97, 211, 0.8), transparent 70%);
+}
+
+.link-group::after {
+  top: -80px;
+    right: -80px;
+    background: radial-gradient(circle, rgba(255, 136, 0, 0.8), transparent 70%);
+}
+
+.link-group .glow-bottom {
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(60px);
+  background: radial-gradient(circle, rgba(15, 180, 198, 0.8), transparent 70%);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.link-group > * {
+  position: relative;
+  z-index: 1;
+}
+
+.link-group a {
+  display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    color: white;
+    font-family: Montserrat-SemiBold, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.14rem;
+    text-transform: uppercase;
+    transition: border-color 0.2s;
+}
+
+.link-subgroup {
+  display: flex;
+    gap: 50px;
+    height: 100%;
+}
+
+#main-logo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  height: 50px;
+}
+
+#logo-text {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    padding: 0;
+}
+
+#logo-text #sub-text {
+  font-size: 6px;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
