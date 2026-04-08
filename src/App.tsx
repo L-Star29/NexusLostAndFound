@@ -12,6 +12,7 @@ import Footer from "./Components/Footer.tsx";
 function App() {
   return (
     <div>
+      <Banner />
       <Hero />
       <PixelDivider />
       <Section1 />

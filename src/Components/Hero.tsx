@@ -9,10 +9,6 @@ function Hero() {
         <div className="image" />
       </BackgroundPattern>
 
-      <BannerSlot>
-        <Banner />
-      </BannerSlot>
-
       <Content>
         <p className="eyebrow">Lost and found, without the chaos</p>
         <h1>
@@ -32,6 +28,7 @@ function Hero() {
 }
 
 const HeroSection = styled.section`
+  margin-top: -150px;
   position: relative;
   min-height: 100vh;
   overflow: hidden;
