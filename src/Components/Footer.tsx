@@ -1,7 +1,5 @@
-import Button1 from './Button1';
-import Button2 from './Button2';
-import './CTA.css';
-import { Fragment } from 'react/jsx-runtime';
+import { Link } from 'react-router-dom';
+import './Sections.css';
 
 function Footer() {
   return (
@@ -16,10 +14,10 @@ function Footer() {
             </div>
             <div className='footer-links'>
                 <p>Pages</p>
-                <a href="index.html">Home</a>
-                <a href="postings.html">Postings</a>
-                <a href="how-to.html">How-To</a>
-                <a href="about-us.html">About Us</a>
+                <Link to="/">Home</Link>
+                <Link to="/postings">Postings</Link>
+                <Link to="/how-to">How-To</Link>
+                <Link to="/about-us">About Us</Link>
             </div>
             <div className='footer-contact'>
                 <p>Contact Us</p>

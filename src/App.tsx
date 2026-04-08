@@ -1,26 +1,15 @@
-import Hero from "./Components/Hero.tsx";
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Section1 from "./Components/Section1.tsx";
-import PixelDivider from "./Components/PixelDivider.tsx";
-import Section2 from "./Components/Section2.tsx";
-import Testimonials from "./Components/Testimonials.tsx";
-import CTA from "./Components/CTA.tsx";
-import Banner from "./Components/Banner.tsx";
-import Footer from "./Components/Footer.tsx";
+import Home from "./Home.tsx";
+import Postings from "./Postings.tsx";
 
 
 function App() {
   return (
-    <div>
-      <Banner />
-      <Hero />
-      <PixelDivider />
-      <Section1 />
-      <Section2 />
-      <Testimonials />
-      <CTA />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/postings" element={<Postings />} />
+    </Routes>
   );
 }
 

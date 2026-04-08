@@ -90,7 +90,7 @@ function Section2() {
         </svg>
         <div className="blur-circle circle1"></div>
         <h1>
-            Why Us?
+            The Benefits
         </h1>
         <div className="blur-circle circle2"></div>
         <section className="why-section">
