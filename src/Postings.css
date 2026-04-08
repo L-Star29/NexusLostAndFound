@@ -1,0 +1,7 @@
+.item-listing {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    background-color: #f5f5f5;
+    padding: 100px 50px;
+}

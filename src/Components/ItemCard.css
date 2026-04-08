@@ -1,0 +1,43 @@
+.item-card {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+    cursor: pointer;
+    background-color: #E56717;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+}
+
+.image-container {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+}
+
+.item-content {
+    padding: 16px;
+}
+
+.item-title {
+    font-size: 17px;
+    margin: 0 0 8px 0;
+}
+
+.item-description {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.item-meta {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

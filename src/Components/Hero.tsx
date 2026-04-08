@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import topographic from '../assets/topographic.jpg';
-import Banner from './Banner.tsx';
 
 function Hero() {
   return (
@@ -43,14 +42,6 @@ const HeroSection = styled.section`
   @media (max-width: 700px) {
     padding-top: 9.5rem;
   }
-`;
-
-const BannerSlot = styled.div`
-  position: absolute;
-  top: 1.25rem;
-  left: clamp(1rem, 2vw, 1.5rem);
-  right: clamp(1rem, 2vw, 1.5rem);
-  z-index: 2;
 `;
 
 const BackgroundPattern = styled.div`
