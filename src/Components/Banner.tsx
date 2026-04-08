@@ -15,7 +15,7 @@ function Banner() {
         <a id="main-logo" href="index.html">
             <img src="src/assets/tuckerlogo.svg" alt="Nexus Logo" id="logo"></img>
             <div id="logo-text">
-                <p>Tucker</p>
+                <p id="main-text">Tucker</p>
                 <p id="sub-text">Lost & Found</p>
             </div>
 

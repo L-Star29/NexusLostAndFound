@@ -1,8 +1,9 @@
 @font-face {
-  font-family: 'Montserrat';
-    src: url('./assets/Fonts/Montserrat/static/Montserrat-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Montserrat";
+  src: url("./assets/Fonts/Montserrat/static/Montserrat-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 .p {
@@ -11,49 +12,48 @@
 
 .link-group {
   position: relative;
-    height: 100px;
-    background: rgba(34, 34, 41, 0.65);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-    display: flex;
-    gap: 25%;
-    margin-top: 25px;
-    margin: 25px 10px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-family: Montserrat-SemiBold, sans-serif;
-    color: white;
-    padding: 0 50px;
-    overflow: hidden;
+  height: 100px;
+  background: rgba(34, 34, 41, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  display: flex;
+  gap: 25%;
+  margin-top: 25px;
+  margin: 25px 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: Montserrat-SemiBold, sans-serif;
+  color: white;
+  padding: 0 50px;
+  overflow: hidden;
 }
 
 .link-group::before,
 .link-group::after {
   content: "";
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.6;
-    z-index: 0;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.6;
+  z-index: 0;
 }
 
 .link-group::before {
   top: -80px;
-    left: -80px;
-    background: radial-gradient(circle, rgba(59, 97, 211, 0.8), transparent 70%);
+  left: -80px;
+  background: radial-gradient(circle, rgba(59, 97, 211, 0.8), transparent 70%);
 }
 
 .link-group::after {
   top: -80px;
-    right: -80px;
-    background: radial-gradient(circle, rgba(255, 136, 0, 0.8), transparent 70%);
+  right: -80px;
+  background: radial-gradient(circle, rgba(255, 136, 0, 0.8), transparent 70%);
 }
 
 .link-group .glow-bottom {
@@ -76,24 +76,31 @@
 
 .link-group a {
   display: flex;
-    align-items: center;
-    height: 100%;
-    position: relative;
-    color: white;
-    font-family: Montserrat-SemiBold, sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.14rem;
-    text-transform: uppercase;
-    transition: border-color 0.2s;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  color: white;
+  font-family: Montserrat-SemiBold, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.14rem;
+  text-transform: uppercase;
+  transition: border-color 0.2s;
 }
 
 .link-subgroup {
   display: flex;
-    gap: 50px;
-    height: 100%;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
+}
+
+.link-subgroup a p {
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 #main-logo {
@@ -101,6 +108,7 @@
   flex-direction: row;
   gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -114,16 +122,24 @@ img {
 
 #logo-text {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0px;
-    padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  padding: 0;
+}
+
+#logo-text p {
+  margin-bottom: 0.3rem;
+}
+
+#logo-text #main-text {
+  letter-spacing: 5px;
 }
 
 #logo-text #sub-text {
-  font-size: 6px;
-    font-weight: 600;
-    margin: 0;
-    white-space: nowrap;
+  font-size: 8px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
 }

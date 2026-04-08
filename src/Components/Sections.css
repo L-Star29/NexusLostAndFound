@@ -330,3 +330,192 @@ figcaption .caption-title {
     margin-left: 40px;
   }
 }
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  height: 100%;
+  background-color: #050505; /* Fond presque noir */
+
+  /* C'est ici que la magie opère. On empile plusieurs couches : */
+  background-image: 
+    /* 1. La Vignette (Ombre sur les bords pour l'effet cinéma) */
+    radial-gradient(circle at center, transparent 30%, #000 90%),
+    /* 2. GRILLE PRINCIPALE (Cyan - Grande) - Lignes Verticales & Horizontales */
+      linear-gradient(rgba(3, 233, 244, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(3, 233, 244, 0.1) 1px, transparent 1px),
+    /* 3. GRILLE SECONDAIRE (Magenta - Petite) - Lignes Verticales & Horizontales */
+      linear-gradient(rgba(217, 3, 244, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217, 3, 244, 0.05) 1px, transparent 1px);
+
+  /* On définit la taille des grilles */
+  background-size:
+    100% 100%,
+    /* Vignette */ 60px 60px,
+    /* Grande grille Cyan (60px) */ 60px 60px,
+    20px 20px,
+    /* Petite grille Magenta (20px) */ 20px 20px;
+
+  /* On lance l'animation */
+  animation: cyber-move 10s linear infinite;
+}
+
+@keyframes cyber-move {
+  0% {
+    background-position:
+      0 0,
+      /* Vignette (ne bouge pas) */ 0 0,
+      0 0,
+      /* Grille Cyan (Départ) */ 0 0,
+      0 0; /* Grille Magenta (Départ) */
+  }
+  100% {
+    background-position:
+      0 0,
+      /* Vignette */ 60px 60px,
+      60px 60px,
+      /* Grille Cyan bouge de 60px (1 carreau) */ 40px 40px,
+      40px 40px; /* Grille Magenta bouge de 40px (plus vite/décalé) */
+  }
+}
+
+.footer-content {
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding-top: 50px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-logo {
+  height: 50px;
+}
+
+#logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  padding: 0;
+  color: white;
+  font-family: Montserrat-SemiBold, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.14rem;
+  text-transform: uppercase;
+}
+
+#logo-text p {
+  margin-bottom: 0.3rem;
+}
+
+#logo-text #main-text {
+  letter-spacing: 5px;
+}
+
+#logo-text #sub-text {
+  font-size: 8px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links p {
+  color: white;
+  font-style: bold;
+  font-weight: 600;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact p {
+  color: white;
+  font-style: bold;
+  font-weight: 600;
+}
+
+.top-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(rgb(255, 229, 203), rgb(252, 243, 235));
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(255, 217, 160, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: #e59a18;
+}
+
+.top-arrow:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: #e59a18;
+  align-items: center;
+}
+
+.top-arrow:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.top-arrow::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: #e59a18;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.top-arrow:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+
+.footer-bottom h1 {
+  text-align: center;
+  font-size: 200px;
+  line-height: normal;
+  margin-top: 0px;
+  margin-bottom: 0;
+}

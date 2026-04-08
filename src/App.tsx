@@ -6,6 +6,7 @@ import Section2 from "./Components/Section2.tsx";
 import Testimonials from "./Components/Testimonials.tsx";
 import CTA from "./Components/CTA.tsx";
 import Banner from "./Components/Banner.tsx";
+import Footer from "./Components/Footer.tsx";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Section2 />
       <Testimonials />
       <CTA />
+      <Footer />
     </div>
   );
 }
