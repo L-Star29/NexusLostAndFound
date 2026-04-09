@@ -1,8 +1,11 @@
 import Button1 from './Button1';
 import Button2 from './Button2';
 import './CTA.css';
+import { useNavigate } from 'react-router-dom';
 
 function CTA() {
+  const navigate = useNavigate();
+
   return (
     <div id="cta" className='cta'>
         <div className="custom-shape-divider-top" aria-hidden="true">
@@ -35,8 +38,8 @@ function CTA() {
             A simple, secure way to reconnect people with their belongings.
         </p>
         <div className='cta-buttons'>
-            <Button1 text="Report Item" onClick={() => alert('Report Found Item Clicked')} />
-            <Button2 text="Search Items" onClick={() => alert('Search Lost Items Clicked')} />
+            <Button1 text="Report Item" onClick={() => navigate('/report')} />
+            <Button2 text="Search Items" onClick={() => navigate('/postings')} />
         </div>
     </div>
   );

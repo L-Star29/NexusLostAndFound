@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState, type CSSProperties } from 'react';
 import './Banner.css';
+import Button5 from "./Button5.tsx";
 
 function Banner() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -124,11 +125,11 @@ function Banner() {
         </Link>
 
         <div className='link-subgroup link-subgroup-right'>
-          <Link to="/how-to">
-            <p>How-To</p>
-          </Link>
           <Link to="/about-us">
             <p>About Us</p>
+          </Link>
+          <Link to="/report">
+            <Button5 />
           </Link>
         </div>
 

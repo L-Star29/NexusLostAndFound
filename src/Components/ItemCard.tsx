@@ -1,40 +1,82 @@
-import "./Sections.css";
-import "./ItemCard.css";
+import './Sections.css';
+import './ItemCard.css';
+import { useNavigate } from 'react-router-dom';
+import Button3 from './Button3.tsx';
+import Button4 from './Button4.tsx';
 
-function ItemCard() {
+type ItemCardProps = {
+  name: string;
+  category: string;
+  description: string;
+  locationFound: string;
+  dateFound: string | null;
+  imageUrl: string;
+  status: string;
+  accent: 'orange' | 'blue';
+};
+
+function formatDate(dateFound: string | null) {
+  if (!dateFound) {
+    return 'Date unavailable';
+  }
+
+  const parsedDate = new Date(dateFound);
+  if (Number.isNaN(parsedDate.getTime())) {
+    return dateFound;
+  }
+
+  return parsedDate.toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  });
+}
+
+function ItemCard({
+  name,
+  category,
+  description,
+  locationFound,
+  dateFound,
+  imageUrl,
+  status,
+  accent,
+}: ItemCardProps) {
+  const isClaimed = status.trim().toLowerCase() === 'claimed';
+  const navigate = useNavigate();
+
+  const itemQuery = new URLSearchParams({ item: name }).toString();
+
   return (
-    <div className="item-card">
+    <div className={`item-card ${accent}`}>
       <div className="image-container">
-        <img src="images/waterbottle.png" alt="Owala Water Bottle" />
+        {imageUrl ? (
+          <img src={imageUrl} alt={name} className="item-image" />
+        ) : (
+          <div className="item-image item-image-fallback">No image available</div>
+        )}
 
-        <span className="badge category">Water Bottle</span>
-        <span className="badge status available">Available</span>
         <div className="item-action-buttons">
-          <a
-            className="item-action-button item-action-claim"
-            href="claim.html?item=Owala%20Water%20Bottle&amp;itemName=Owala%20Water%20Bottle"
-          >
-            Claim
-          </a>
-          <a
-            className="item-action-button item-action-inquire"
-            href="inquire.html?item=Owala%20Water%20Bottle&amp;itemName=Owala%20Water%20Bottle"
-          >
-            Inquire
-          </a>
+          <Button3
+            text={isClaimed ? 'Claimed' : 'Claim'}
+            disabled={isClaimed}
+            onClick={() => navigate(`/claim?${itemQuery}`)}
+          />
+          <Button4 text="Inquire" onClick={() => navigate(`/inquire?${itemQuery}`)} />
         </div>
+
+        <span className="badge category">{category}</span>
+        <span className="badge status">{status}</span>
       </div>
 
       <div className="item-content">
-        <h3 className="item-title">Owala Water Bottle</h3>
+        <h3 className="item-title">{name}</h3>
 
-        <p className="item-description">
-          Blue bottle with white lid and small sticker on side.
-        </p>
+        <p className="item-description">{description}</p>
 
         <div className="item-meta">
-          <span>Room 2202</span>
-          <span>Jan 18, 2026</span>
+          <span>{locationFound}</span>
+          <span>{formatDate(dateFound)}</span>
         </div>
       </div>
     </div>

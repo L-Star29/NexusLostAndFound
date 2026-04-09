@@ -260,6 +260,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 75px;
+  width: 100%;
 }
 
 .testimonial {
@@ -322,12 +323,124 @@ figcaption .caption-title {
 @media (max-width: 600px) {
   .testimonials-content {
     flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
   .testimonial {
-    width: 60%;
+    width: min(100%, 34rem);
+    margin-bottom: 0;
   }
   .quote-1 {
-    margin-left: 40px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .boxes {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .howitworksbox {
+    width: min(100%, 34rem);
+  }
+
+  .why-container {
+    gap: 42px 36px;
+  }
+}
+
+@media (max-width: 760px) {
+  .section1 {
+    padding: 72px 16px;
+  }
+
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    margin: 48px 0 24px;
+  }
+
+  .howitworksbox {
+    width: 100%;
+    max-width: 32rem;
+  }
+
+  .orange-overlay,
+  .blue-overlay {
+    padding: 22px 18px;
+  }
+
+  .eb-header-text h2 {
+    font-size: 1.15rem;
+  }
+
+  .howitworksbox ul {
+    padding-left: 1.2rem;
+    margin: 0.75rem 0 0;
+  }
+
+  .howitworksbox li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .section2 h1 {
+    padding-top: 76px;
+  }
+
+  .why-section {
+    padding: 56px 18px;
+  }
+
+  .why-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 28px;
+    padding-bottom: 44px;
+  }
+
+  .why-card {
+    gap: 16px;
+  }
+
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .icon-box img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .why-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .why-card p {
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .testimonials {
+    padding-top: 72px;
+    padding-bottom: 56px;
+  }
+
+  .testimonials-content {
+    margin-top: 40px;
+  }
+
+  .testimonial {
+    width: min(100%, 34rem);
+  }
+
+  .testimonial blockquote {
+    font-size: 0.98rem;
+    line-height: 1.6rem;
   }
 }
 
@@ -512,4 +625,17 @@ figcaption .caption-title {
   line-height: normal;
   margin-top: 0px;
   margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 36px;
+    padding: 48px 20px 0;
+    text-align: center;
+  }
+
+  .footer-bottom h1 {
+    font-size: clamp(4rem, 18vw, 7rem);
+  }
 }

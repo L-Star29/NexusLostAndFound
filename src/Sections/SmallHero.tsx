@@ -3,7 +3,7 @@ import topographic from '../assets/topographic.jpg';
 
 function SmallHero() {
   return (
-    <HeroSection aria-label="Postings hero">
+    <HeroSection id="hero" aria-label="Postings hero">
       <Backdrop aria-hidden="true" />
       <Centerpiece>
         <h1>Postings</h1>
@@ -13,14 +13,19 @@ function SmallHero() {
 }
 
 const HeroSection = styled.section`
+  margin-top: -150px;
   position: relative;
   min-height: clamp(18rem, 46vw, 28rem);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: clamp(7rem, 14vw, 9rem) 1.5rem clamp(3.5rem, 6vw, 5rem);
+  padding: clamp(9rem, 14vw, 10.5rem) 1.5rem clamp(3.5rem, 6vw, 5rem);
   background: #0b0b0b;
+
+  @media (max-width: 700px) {
+    padding-top: 8.75rem;
+  }
 `;
 
 const Backdrop = styled.div`
@@ -49,7 +54,7 @@ const Centerpiece = styled.div`
     border-radius: 999px;
     background: rgba(8, 8, 8, 0.9);
     color: #f8f4eb;
-    font-size: 100px;
+    font-size: clamp(3rem, 9vw, 6.25rem);
     line-height: 1;
     letter-spacing: -0.05em;
     text-align: center;

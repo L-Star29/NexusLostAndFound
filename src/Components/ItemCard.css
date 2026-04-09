@@ -4,12 +4,16 @@
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
     transition: 0.2s ease;
     cursor: pointer;
-    background-color: #E56717;
+    background-color: #f28c28;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
     max-width: none;
+}
+
+.item-card.blue {
+    background-color: #2c6bdf;
 }
 
 .image-container {
@@ -18,7 +22,71 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f4f4f4;
+    background: #fff;
+    padding: 18px;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.item-image-fallback {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: #5f5f5f;
+    font-size: 0.95rem;
+    background: linear-gradient(135deg, #ececec, #dcdcdc);
+}
+
+.item-action-buttons {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(12, 12, 12, 0.3);
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.image-container:hover .item-action-buttons {
+    opacity: 1;
+    visibility: visible;
+}
+
+.badge {
+    position: absolute;
+    top: 14px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.badge.category {
+    left: 14px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #111;
+}
+
+.badge.status {
+    right: 14px;
+    background: rgba(17, 17, 17, 0.88);
+    color: #fff;
+}
+
+.image-container:hover .badge {
+    opacity: 0;
 }
 
 .item-content {
@@ -28,11 +96,15 @@
 .item-title {
     font-size: 17px;
     margin: 0 0 8px 0;
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 0.01em;
 }
 
 .item-description {
     font-size: 14px;
     margin-bottom: 12px;
+    color: #ffffff;
 }
 
 .item-meta {
@@ -40,4 +112,5 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    color: #ffffff;
 }

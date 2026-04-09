@@ -310,6 +310,29 @@ const StyledWrapper = styled.div`
       -8px 4px 10px -6px hsl(0 0% 30% / 0.5) inset,
       inset 0 8px 15px rgba(0, 0, 0, 0.6);
     filter: brightness(0.85);
+  }
+
+  @media (max-width: 760px) {
+    .button .text {
+      min-width: 220px;
+      min-height: 58px;
+      padding: 12px 22px;
+      font-size: 18px;
+      gap: 10px;
+    }
+
+    .button:hover .text svg {
+      right: 18px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .button .text {
+      min-width: 200px;
+      min-height: 52px;
+      padding: 10px 18px;
+      font-size: 16px;
+    }
   }`;
 
 export default Button2;

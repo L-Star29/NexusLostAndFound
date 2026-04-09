@@ -125,16 +125,41 @@ const Content = styled.div`
 
   @media (max-width: 700px) {
     width: 100%;
-    padding: 1.4rem 0.9rem;
+    gap: 0.9rem;
+    padding: 1.15rem 0.8rem;
+    margin-left: 0;
 
     h1 {
       max-width: none;
-      font-size: clamp(1.9rem, 8vw, 3rem);
+      font-size: clamp(1.7rem, 7vw, 2.5rem);
+      line-height: 1.04;
+    }
+
+    .eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+    }
+
+    .subtext {
+      font-size: 0.95rem;
+      line-height: 1.55;
     }
 
     &::before {
       inset: -1rem -0.6rem;
       transform: scale(1.04, 1.16);
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem 0.55rem;
+
+    h1 {
+      font-size: clamp(1.45rem, 8.5vw, 2.05rem);
+    }
+
+    .subtext {
+      font-size: 0.88rem;
     }
   }
 `;
