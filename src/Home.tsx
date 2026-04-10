@@ -1,9 +1,9 @@
 import './App.css';
-import Hero from "./Components/Hero.tsx";
-import Section1 from "./Components/Section1.tsx";
+import Hero from "./Sections/Hero.tsx";
+import Section1 from "./Sections/Section1.tsx";
 import PixelDivider from "./Components/PixelDivider.tsx";
-import Section2 from "./Components/Section2.tsx";
-import Testimonials from "./Components/Testimonials.tsx";
+import Section2 from "./Sections/Section2.tsx";
+import Testimonials from "./Sections/Testimonials.tsx";
 import CTA from "./Components/CTA.tsx";
 import Banner from "./Components/Banner.tsx";
 import Footer from "./Components/Footer.tsx";

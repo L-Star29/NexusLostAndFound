@@ -4,9 +4,12 @@ function Section1() {
   return (
     <div className='section1'>
         
+        {/*Header of section */}
         <h1>
           How It Works
         </h1>
+
+        {/*Main Cards of section */}
         <div className='boxes'>
             <div className='howitworksbox orangebox'>
                 <div className="orange-overlay">
@@ -23,6 +26,7 @@ function Section1() {
                     </ul>
                 </div>
             </div>
+
             <div className='howitworksbox bluebox'>
                 <div className="blue-overlay">
                     <div className="eb-header-text">
@@ -38,6 +42,7 @@ function Section1() {
                     </ul>
                 </div>
             </div>
+            
             <div className='howitworksbox orangebox'>
                 <div className="orange-overlay">
                     <div className="eb-header-text">

@@ -1,4 +1,4 @@
-import './Sections.css';
+import '../Sections/Sections.css';
 import './ItemCard.css';
 import { useNavigate } from 'react-router-dom';
 import Button3 from './Button3.tsx';
