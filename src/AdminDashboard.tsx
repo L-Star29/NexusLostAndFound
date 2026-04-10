@@ -52,9 +52,7 @@ function normalizeStatus(status: string | null) {
 
 function AdminDashboard() {
   const [password, setPassword] = useState('');
-  const [isAuthorized, setIsAuthorized] = useState(
-    () => window.sessionStorage.getItem('nexus-admin-auth') === 'true'
-  );
+  const [isAuthorized, setIsAuthorized] = useState(false);
   const [authError, setAuthError] = useState('');
 
   const [postings, setPostings] = useState<LostItemRecord[]>([]);
@@ -230,6 +228,10 @@ function AdminDashboard() {
   };
 
   useEffect(() => {
+    window.sessionStorage.removeItem('nexus-admin-auth');
+  }, []);
+
+  useEffect(() => {
     if (!isAuthorized) {
       return;
     }
@@ -241,7 +243,6 @@ function AdminDashboard() {
     event.preventDefault();
 
     if (password === ADMIN_PASSWORD) {
-      window.sessionStorage.setItem('nexus-admin-auth', 'true');
       setIsAuthorized(true);
       setAuthError('');
       setPassword('');
@@ -443,7 +444,6 @@ function AdminDashboard() {
               type="button"
               className="admin-logout-button"
               onClick={() => {
-                window.sessionStorage.removeItem('nexus-admin-auth');
                 setIsAuthorized(false);
               }}
             >
